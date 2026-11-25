@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>分配规则配置 — 公益物资捐赠与发放追踪系统</title>
+<link rel="stylesheet" href="mock.css"></head>
+<body><div class="app">
+  <aside class="sidebar">
+    <div class="logo"><div class="mark">慈</div>
+      <div class="name">公益物资追踪<small>CHARITY MATERIAL TRACKING</small></div></div>
+    <nav class="menu">
+      <div class="menu-group">总览</div>
+      <a class="menu-item" href="dashboard.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></span>公益物资看板</a>
+      <div class="menu-group">捐赠管理</div>
+      <a class="menu-item" href="project-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 14S1.5 9.9 1.5 5.9A3.4 3.4 0 0 1 8 4a3.4 3.4 0 0 1 6.5 1.9C14.5 9.9 8 14 8 14z"/></svg></span>捐赠项目</a>
+      <a class="menu-item" href="demand-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l6 3v8l-6 3-6-3V4l6-3zm0 1.6L3.9 4.6 8 6.5l4.1-1.9L8 2.6zM3 5.9v5.4l4 2v-5.4L3 5.9zm6 7.4l4-2V5.9l-4 2v5.4z"/></svg></span>物资与需求</a>
+      <a class="menu-item" href="intent-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>捐赠意向<span class="badge">6</span></a>
+      <div class="menu-group">仓储管理</div>
+      <a class="menu-item" href="receiving.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l6 3v8l-6 3-6-3V4l6-3zm0 1.6L3.9 4.6 8 6.5l4.1-1.9L8 2.6zM3 5.9v5.4l4 2v-5.4L3 5.9zm6 7.4l4-2V5.9l-4 2v5.4z"/></svg></span>收货验收</a>
+      <a class="menu-item" href="batch-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l6 3v8l-6 3-6-3V4l6-3zm0 1.6L3.9 4.6 8 6.5l4.1-1.9L8 2.6zM3 5.9v5.4l4 2v-5.4L3 5.9zm6 7.4l4-2V5.9l-4 2v5.4z"/></svg></span>物资批次台账</a>
+      <a class="menu-item" href="distribute.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>拣货发放</a>
+      <div class="menu-group">受助管理</div>
+      <a class="menu-item" href="application-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="4.6" r="2.8"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5H2z"/></svg></span>受助需求池</a>
+      <a class="menu-item" href="application-review.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="4.6" r="2.8"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5H2z"/></svg></span>资格与反重审核</a>
+      <a class="menu-item" href="distribution-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>发放追踪单</a>
+      <a class="menu-item" href="feedback-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>去向反馈</a>
+      <div class="menu-group">创新模块</div>
+      <a class="menu-item active" href="rule-config.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 5.4A2.6 2.6 0 1 0 8 10.6 2.6 2.6 0 0 0 8 5.4zM13 8c0-.4 0-.7-.1-1l1.4-1-1.3-2.2-1.6.6a4.9 4.9 0 0 0-1.7-1L9.4 1.6H7.2l-.3 1.8a4.9 4.9 0 0 0-1.7 1l-1.6-.6L2.3 6l1.4 1c-.1.3-.1.6-.1 1s0 .7.1 1l-1.4 1 1.3 2.2 1.6-.6c.5.4 1 .7 1.7 1l.3 1.8h2.2l.3-1.8c.6-.2 1.2-.5 1.7-1l1.6.6 1.3-2.2-1.4-1c.1-.3.1-.6.1-1z"/></svg></span>分配规则配置</a>
+      <a class="menu-item" href="score-detail.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="1.5" y="9" width="3" height="6"/><rect x="6.5" y="4" width="3" height="11"/><rect x="11.5" y="6.5" width="3" height="8.5"/></svg></span>分配建议解释</a>
+      <div class="menu-group">公开与报表</div>
+      <a class="menu-item" href="report.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="1.5" y="9" width="3" height="6"/><rect x="6.5" y="4" width="3" height="11"/><rect x="11.5" y="6.5" width="3" height="8.5"/></svg></span>公开报表</a>
+      <div class="menu-group">系统管理</div>
+      <a class="menu-item" href="user-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="4.6" r="2.8"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5H2z"/></svg></span>用户管理</a>
+      <a class="menu-item" href="role-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="4.6" r="2.8"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5H2z"/></svg></span>角色管理</a>
+      <a class="menu-item" href="menu-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 5.4A2.6 2.6 0 1 0 8 10.6 2.6 2.6 0 0 0 8 5.4zM13 8c0-.4 0-.7-.1-1l1.4-1-1.3-2.2-1.6.6a4.9 4.9 0 0 0-1.7-1L9.4 1.6H7.2l-.3 1.8a4.9 4.9 0 0 0-1.7 1l-1.6-.6L2.3 6l1.4 1c-.1.3-.1.6-.1 1s0 .7.1 1l-1.4 1 1.3 2.2 1.6-.6c.5.4 1 .7 1.7 1l.3 1.8h2.2l.3-1.8c.6-.2 1.2-.5 1.7-1l1.6.6 1.3-2.2-1.4-1c.1-.3.1-.6.1-1z"/></svg></span>菜单管理</a>
+      <a class="menu-item" href="log-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>操作日志</a>
+    </nav>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <div class="crumb"><b>总览</b><span>/</span>分配规则配置</div>
+      <div class="topbar-right">
+        <div class="icon-btn"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5a4 4 0 0 1 4 4v3l1.4 2.2H2.6L4 8.5v-3a4 4 0 0 1 4-4zM6.4 12h3.2a1.6 1.6 0 0 1-3.2 0z"/></svg><span class="dot"></span></div>
+        <div class="icon-btn"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="6.6" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M6.2 6.2A1.9 1.9 0 0 1 9.8 6.6c0 1.2-1.6 1.5-1.6 2.7h-1.2c0-1.7 1.5-1.9 1.5-2.7a.8.8 0 0 0-1.5-.3l-1-.3zM7 11.4h1.3V12.6H7z"/></svg></div>
+        <div class="user"><div class="avatar">陈</div>
+          <div><div class="nm">陈砚秋</div><div class="rl">项目管理员</div></div></div>
+      </div>
+    </header>
+    <main class="content">
+<div class="page-head"><div><h1>分配规则配置</h1><p>「需求紧迫度与物资分配建议」的权重、阈值与版本管理，权重合计必须等于 100%</p></div><div class="actions"><button class="btn">查看历史版本</button><button class="btn btn-primary">保存并发布新版本</button></div></div>
+<div class="grid-32">
+  <div class="card"><div class="card-head"><h2>当前生效规则 v3.2</h2>
+      <span class="sub">生效时间 2026-10-08 09:00 · 发布人 陈砚秋</span>
+      <div class="actions"><span class="tag tag-plain tag-success">启用中</span></div></div>
+    <div class="rule-note" style="margin-bottom:14px">
+      规则用于生成受助申请的分配建议，属于「可解释的业务辅助工具」，不替用户做不可逆决定。
+      修改权重只影响之后的新计算或主动重新计算的数据，历史结果按原版本保留。
+    </div>
+    <div class="table-wrap"><table class="table"><thead><tr>
+      <th>输入因素</th><th>数据来源</th><th>缺失处理</th><th>权重</th><th>评分规则</th><th>操作</th></tr></thead>
+    <tbody>
+      <tr><td>需求紧迫等级</td><td>aid_application.urgency_level</td><td>不参与计算并提示补录</td>
+        <td><input class="input" style="width:66px;height:27px" value="25"> %</td>
+        <td class="small">特急 100 / 紧急 75 / 一般 50 / 低 25</td><td><span class="link-op">调阈值</span></td></tr>
+      <tr><td>家庭人数</td><td>aid_application.family_size</td><td>不参与计算并提示补录</td>
+        <td><input class="input" style="width:66px;height:27px" value="15"> %</td>
+        <td class="small">≥5 人 100 / 4 人 80 / 3 人 65 / ≤2 人 45</td><td><span class="link-op">调阈值</span></td></tr>
+      <tr><td>历史领取量</td><td>distribution_order 近 12 月汇总</td><td>按 0 计并提示</td>
+        <td><input class="input" style="width:66px;height:27px" value="15"> %</td>
+        <td class="small">越接近年度上限得分越低（线性反向）</td><td><span class="link-op">调阈值</span></td></tr>
+      <tr><td>库存数量</td><td>inventory_batch 可用量汇总</td><td>不参与计算并提示补录</td>
+        <td><input class="input" style="width:66px;height:27px" value="20"> %</td>
+        <td class="small">可满足率 ≥100% 得满分，线性递减</td><td><span class="link-op">调阈值</span></td></tr>
+      <tr><td>保质期</td><td>inventory_batch.expire_date</td><td>不适用时按中性 60 分</td>
+        <td><input class="input" style="width:66px;height:27px" value="10"> %</td>
+        <td class="small">剩余 ≤30 天 100（优先出库）/ ≤90 天 80 / 其余 60</td><td><span class="link-op">调阈值</span></td></tr>
+      <tr><td>区域配送能力</td><td>sys_org.delivery_capacity</td><td>不参与计算并提示补录</td>
+        <td><input class="input" style="width:66px;height:27px" value="15"> %</td>
+        <td class="small">高 100 / 中 75 / 低 45</td><td><span class="link-op">调阈值</span></td></tr>
+    </tbody></table></div>
+    <div class="flex gap12 mt16">
+      <div class="summary-box" style="margin:0;flex:1">
+        <div class="row"><span>权重合计</span><b style="color:#2B7955;font-size:15px">100%</b></div>
+        <div class="row"><span>校验结果</span><b style="color:#2B7955">通过，可发布</b></div>
+      </div>
+      <div class="summary-box" style="margin:0;flex:1">
+        <div class="row"><span>结果等级</span><b>优先分配 ≥80 / 常规 60-79</b></div>
+        <div class="row"><span></span><b>暂缓 40-59 / 不推荐 &lt;40</b></div>
+      </div>
+      <div class="summary-box" style="margin:0;flex:1">
+        <div class="row"><span>发布时间</span><b>保存后立即生效</b></div>
+        <div class="row"><span>版本号</span><b>自动递增 v3.3</b></div>
+      </div>
+    </div>
+    <div class="card-head mt16" style="margin-bottom:8px"><h2>版本变更说明</h2><span class="sub">发布时必填，≥5 字</span></div>
+    <div class="textarea" style="max-width:100%">提高库存数量权重至 20%，降低历史领取量权重至 15%，使库存充足地区的发放更及时。</div>
+  </div>
+  <div>
+    <div class="card"><div class="card-head"><h2>版本历史</h2></div>
+      <div class="timeline">
+        <div class="tl-item cur"><div class="tl-t">v3.2　2026-10-08 生效</div>
+          <div class="tl-m">发布人 陈砚秋 · 使用中</div>
+          <div class="tl-c">提高紧迫等级权重至 25%，新增区域配送能力因素。</div></div>
+        <div class="tl-item done"><div class="tl-t">v3.1　2026-08-20 生效</div>
+          <div class="tl-m">发布人 陈砚秋</div>
+          <div class="tl-c">修正保质期评分阈值，临期批次优先出库。</div></div>
+        <div class="tl-item done"><div class="tl-t">v3.0　2026-06-12 生效</div>
+          <div class="tl-m">发布人 周慧兰</div>
+          <div class="tl-c">首次引入六因素加权模型，替代原单一紧迫度排序。</div></div>
+      </div>
+    </div>
+    <div class="card"><div class="card-head"><h2>效果统计</h2><span class="sub">验证创新模块是否有效</span></div>
+      <div class="gauge-row"><span class="lb">推荐采纳率</span><span class="track"><span class="fill" style="width:78%;background:#2B7955"></span></span><span class="vl">78.4%</span></div>
+      <div class="gauge-row"><span class="lb">人工调整率</span><span class="track"><span class="fill" style="width:13%;background:#A8761C"></span></span><span class="vl">13.2%</span></div>
+      <div class="gauge-row"><span class="lb">签收完成率</span><span class="track"><span class="fill" style="width:96%;background:#356A7A"></span></span><span class="vl">96.8%</span></div>
+      <div class="gauge-row"><span class="lb">平均处理时长</span><span class="track"><span class="fill" style="width:62%;background:#456C7E"></span></span><span class="vl">21.4h</span></div>
+      <div class="rule-note mt12">统计区间 2026-09-01 至 2026-11-01，样本 328 条发放单。人工调整主要集中在历史领取量与家庭人数两项。</div>
+    </div>
+    <div class="card"><div class="card-head"><h2>最近计算结果</h2></div>
+      <div class="table-wrap"><table class="table"><tbody>
+        <tr><td class="mono small">SCR-2026-0418</td><td>86.4</td><td><span class="tag tag-success">优先</span></td><td><a class="link-op" href="score-detail.html">查看</a></td></tr>
+        <tr><td class="mono small">SCR-2026-0417</td><td>72.1</td><td><span class="tag tag-sub">常规</span></td><td><a class="link-op" href="score-detail.html">查看</a></td></tr>
+        <tr><td class="mono small">SCR-2026-0415</td><td>64.8</td><td><span class="tag tag-sub">常规</span></td><td><a class="link-op" href="score-detail.html">查看</a></td></tr>
+        <tr><td class="mono small">SCR-2026-0412</td><td>52.3</td><td><span class="tag tag-warn">暂缓</span></td><td><a class="link-op" href="score-detail.html">查看</a></td></tr>
+        <tr><td class="mono small">SCR-2026-0409</td><td>38.7</td><td><span class="tag tag-danger">不推荐</span></td><td><a class="link-op" href="score-detail.html">查看</a></td></tr>
+      </tbody></table></div>
+    </div>
+  </div>
+</div>
+    </main>
+  </div>
+</div></body></html>

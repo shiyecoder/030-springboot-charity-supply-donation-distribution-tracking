@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>消息中心 — 公益物资捐赠与发放追踪系统</title>
+<link rel="stylesheet" href="mock.css"></head>
+<body><div class="app">
+  <aside class="sidebar">
+    <div class="logo"><div class="mark">慈</div>
+      <div class="name">公益物资追踪<small>CHARITY MATERIAL TRACKING</small></div></div>
+    <nav class="menu">
+      <div class="menu-group">总览</div>
+      <a class="menu-item" href="dashboard.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></span>公益物资看板</a>
+      <div class="menu-group">捐赠管理</div>
+      <a class="menu-item" href="project-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 14S1.5 9.9 1.5 5.9A3.4 3.4 0 0 1 8 4a3.4 3.4 0 0 1 6.5 1.9C14.5 9.9 8 14 8 14z"/></svg></span>捐赠项目</a>
+      <a class="menu-item" href="demand-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l6 3v8l-6 3-6-3V4l6-3zm0 1.6L3.9 4.6 8 6.5l4.1-1.9L8 2.6zM3 5.9v5.4l4 2v-5.4L3 5.9zm6 7.4l4-2V5.9l-4 2v5.4z"/></svg></span>物资与需求</a>
+      <a class="menu-item" href="intent-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>捐赠意向<span class="badge">6</span></a>
+      <div class="menu-group">仓储管理</div>
+      <a class="menu-item" href="receiving.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l6 3v8l-6 3-6-3V4l6-3zm0 1.6L3.9 4.6 8 6.5l4.1-1.9L8 2.6zM3 5.9v5.4l4 2v-5.4L3 5.9zm6 7.4l4-2V5.9l-4 2v5.4z"/></svg></span>收货验收</a>
+      <a class="menu-item" href="batch-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l6 3v8l-6 3-6-3V4l6-3zm0 1.6L3.9 4.6 8 6.5l4.1-1.9L8 2.6zM3 5.9v5.4l4 2v-5.4L3 5.9zm6 7.4l4-2V5.9l-4 2v5.4z"/></svg></span>物资批次台账</a>
+      <a class="menu-item" href="distribute.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>拣货发放</a>
+      <div class="menu-group">受助管理</div>
+      <a class="menu-item" href="application-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="4.6" r="2.8"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5H2z"/></svg></span>受助需求池</a>
+      <a class="menu-item" href="application-review.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="4.6" r="2.8"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5H2z"/></svg></span>资格与反重审核</a>
+      <a class="menu-item" href="distribution-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>发放追踪单</a>
+      <a class="menu-item" href="feedback-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>去向反馈</a>
+      <div class="menu-group">创新模块</div>
+      <a class="menu-item" href="rule-config.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 5.4A2.6 2.6 0 1 0 8 10.6 2.6 2.6 0 0 0 8 5.4zM13 8c0-.4 0-.7-.1-1l1.4-1-1.3-2.2-1.6.6a4.9 4.9 0 0 0-1.7-1L9.4 1.6H7.2l-.3 1.8a4.9 4.9 0 0 0-1.7 1l-1.6-.6L2.3 6l1.4 1c-.1.3-.1.6-.1 1s0 .7.1 1l-1.4 1 1.3 2.2 1.6-.6c.5.4 1 .7 1.7 1l.3 1.8h2.2l.3-1.8c.6-.2 1.2-.5 1.7-1l1.6.6 1.3-2.2-1.4-1c.1-.3.1-.6.1-1z"/></svg></span>分配规则配置</a>
+      <a class="menu-item" href="score-detail.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="1.5" y="9" width="3" height="6"/><rect x="6.5" y="4" width="3" height="11"/><rect x="11.5" y="6.5" width="3" height="8.5"/></svg></span>分配建议解释</a>
+      <div class="menu-group">公开与报表</div>
+      <a class="menu-item" href="report.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="1.5" y="9" width="3" height="6"/><rect x="6.5" y="4" width="3" height="11"/><rect x="11.5" y="6.5" width="3" height="8.5"/></svg></span>公开报表</a>
+      <div class="menu-group">系统管理</div>
+      <a class="menu-item" href="user-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="4.6" r="2.8"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5H2z"/></svg></span>用户管理</a>
+      <a class="menu-item" href="role-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="4.6" r="2.8"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5H2z"/></svg></span>角色管理</a>
+      <a class="menu-item" href="menu-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 5.4A2.6 2.6 0 1 0 8 10.6 2.6 2.6 0 0 0 8 5.4zM13 8c0-.4 0-.7-.1-1l1.4-1-1.3-2.2-1.6.6a4.9 4.9 0 0 0-1.7-1L9.4 1.6H7.2l-.3 1.8a4.9 4.9 0 0 0-1.7 1l-1.6-.6L2.3 6l1.4 1c-.1.3-.1.6-.1 1s0 .7.1 1l-1.4 1 1.3 2.2 1.6-.6c.5.4 1 .7 1.7 1l.3 1.8h2.2l.3-1.8c.6-.2 1.2-.5 1.7-1l1.6.6 1.3-2.2-1.4-1c.1-.3.1-.6.1-1z"/></svg></span>菜单管理</a>
+      <a class="menu-item" href="log-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>操作日志</a>
+    </nav>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <div class="crumb"><b>总览</b><span>/</span>消息中心</div>
+      <div class="topbar-right">
+        <div class="icon-btn"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5a4 4 0 0 1 4 4v3l1.4 2.2H2.6L4 8.5v-3a4 4 0 0 1 4-4zM6.4 12h3.2a1.6 1.6 0 0 1-3.2 0z"/></svg><span class="dot"></span></div>
+        <div class="icon-btn"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="6.6" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M6.2 6.2A1.9 1.9 0 0 1 9.8 6.6c0 1.2-1.6 1.5-1.6 2.7h-1.2c0-1.7 1.5-1.9 1.5-2.7a.8.8 0 0 0-1.5-.3l-1-.3zM7 11.4h1.3V12.6H7z"/></svg></div>
+        <div class="user"><div class="avatar">陈</div>
+          <div><div class="nm">陈砚秋</div><div class="rl">项目管理员</div></div></div>
+      </div>
+    </header>
+    <main class="content">
+<div class="page-head"><div><h1>消息中心</h1><p>待审批、即将超时、已退回、待验收与处理完成消息，均含业务编号与详情跳转</p></div><div class="actions"><button class="btn">全部标为已读</button></div></div>
+<div class="card">
+  <div class="flex gap8" style="margin-bottom:14px">
+    <span class="tag tag-plain tag-info">全部 36</span>
+    <span class="tag tag-plain tag-warn">待审批 6</span>
+    <span class="tag tag-plain tag-danger">即将超时 3</span>
+    <span class="tag tag-plain tag-gray">已退回 2</span>
+    <span class="tag tag-plain tag-sub">待验收 4</span>
+    <span class="tag tag-plain tag-success">已完成 21</span>
+  </div>
+  <div class="table-wrap"><table class="table"><thead><tr>
+    <th style="width:60px">类型</th><th>消息内容</th><th>业务编号</th><th>时间</th><th>状态</th><th>操作</th></tr></thead>
+  <tbody>
+    <tr><td><span class="tag tag-plain tag-warn">待审批</span></td>
+      <td>捐赠意向 INT-0862（青禾商贸，菜籽油 200 桶）待您预审，预约送达时间 2026-11-03 09:00。</td>
+      <td class="mono">INT-0862</td><td class="num">2026-11-01 09:24</td><td><span class="tag tag-plain tag-warn">未读</span></td>
+      <td><a class="link-op" href="intent-list.html">去处理</a></td></tr>
+    <tr><td><span class="tag tag-plain tag-danger">即将超时</span></td>
+      <td>发放追踪单 DO-2026-0418 距截止时间不足 32 小时，当前阶段「分配出库」。</td>
+      <td class="mono">DO-2026-0418</td><td class="num">2026-11-01 09:00</td><td><span class="tag tag-plain tag-warn">未读</span></td>
+      <td><a class="link-op" href="distribution-detail.html">去处理</a></td></tr>
+    <tr><td><span class="tag tag-plain tag-sub">待验收</span></td>
+      <td>收货任务 RCV-2026-1031-018（城西社区爱心志愿队，洗衣液 150 瓶）已到仓，请验收。</td>
+      <td class="mono">RCV-2026-1031-018</td><td class="num">2026-10-31 15:12</td><td><span class="tag tag-plain tag-warn">未读</span></td>
+      <td><a class="link-op" href="receiving.html">去验收</a></td></tr>
+    <tr><td><span class="tag tag-plain tag-gray">已退回</span></td>
+      <td>受助申请 AID-2026-0398 被退回：年度累计领取量已超上限，请补充材料后重新提交。</td>
+      <td class="mono">AID-2026-0398</td><td class="num">2026-10-31 15:08</td><td><span class="tag tag-plain tag-gray">已读</span></td>
+      <td><a class="link-op" href="application-list.html">查看</a></td></tr>
+    <tr><td><span class="tag tag-plain tag-success">已完成</span></td>
+      <td>发放追踪单 DO-2026-0403 已完成归档，受助人反馈已审核通过并公开。</td>
+      <td class="mono">DO-2026-0403</td><td class="num">2026-10-30 19:40</td><td><span class="tag tag-plain tag-gray">已读</span></td>
+      <td><a class="link-op" href="distribution-detail.html">查看</a></td></tr>
+    <tr><td><span class="tag tag-plain tag-warn">待审批</span></td>
+      <td>去向反馈 FB-2026-0306 待审核，提交人 陈**，含 2 张照片。</td>
+      <td class="mono">FB-2026-0306</td><td class="num">2026-10-30 19:22</td><td><span class="tag tag-plain tag-warn">未读</span></td>
+      <td><a class="link-op" href="feedback-list.html">去审核</a></td></tr>
+    <tr><td><span class="tag tag-plain tag-danger">异常</span></td>
+      <td>批次 BAT-260802-03（东北长粒香米）已过期，系统已自动锁定，请登记处置方式。</td>
+      <td class="mono">BAT-260802-03</td><td class="num">2026-10-21 00:05</td><td><span class="tag tag-plain tag-gray">已读</span></td>
+      <td><a class="link-op" href="batch-list.html">去处置</a></td></tr>
+  </tbody></table></div>
+  <div class="pager"><span class="total">共 36 条</span><select class="select" style="min-width:110px;height:27px"><option>10 条/页</option><option>20 条/页</option><option>50 条/页</option></select><span class="pg">上一页</span><span class="pg on">1</span><span class="pg">2</span><span class="pg">3</span><span class="pg">4</span><span class="pg">下一页</span></div>
+</div>
+    </main>
+  </div>
+</div></body></html>

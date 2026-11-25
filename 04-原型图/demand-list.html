@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>物资与需求 — 公益物资捐赠与发放追踪系统</title>
+<link rel="stylesheet" href="mock.css"></head>
+<body><div class="app">
+  <aside class="sidebar">
+    <div class="logo"><div class="mark">慈</div>
+      <div class="name">公益物资追踪<small>CHARITY MATERIAL TRACKING</small></div></div>
+    <nav class="menu">
+      <div class="menu-group">总览</div>
+      <a class="menu-item" href="dashboard.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></span>公益物资看板</a>
+      <div class="menu-group">捐赠管理</div>
+      <a class="menu-item" href="project-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 14S1.5 9.9 1.5 5.9A3.4 3.4 0 0 1 8 4a3.4 3.4 0 0 1 6.5 1.9C14.5 9.9 8 14 8 14z"/></svg></span>捐赠项目</a>
+      <a class="menu-item active" href="demand-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l6 3v8l-6 3-6-3V4l6-3zm0 1.6L3.9 4.6 8 6.5l4.1-1.9L8 2.6zM3 5.9v5.4l4 2v-5.4L3 5.9zm6 7.4l4-2V5.9l-4 2v5.4z"/></svg></span>物资与需求</a>
+      <a class="menu-item" href="intent-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>捐赠意向<span class="badge">6</span></a>
+      <div class="menu-group">仓储管理</div>
+      <a class="menu-item" href="receiving.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l6 3v8l-6 3-6-3V4l6-3zm0 1.6L3.9 4.6 8 6.5l4.1-1.9L8 2.6zM3 5.9v5.4l4 2v-5.4L3 5.9zm6 7.4l4-2V5.9l-4 2v5.4z"/></svg></span>收货验收</a>
+      <a class="menu-item" href="batch-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l6 3v8l-6 3-6-3V4l6-3zm0 1.6L3.9 4.6 8 6.5l4.1-1.9L8 2.6zM3 5.9v5.4l4 2v-5.4L3 5.9zm6 7.4l4-2V5.9l-4 2v5.4z"/></svg></span>物资批次台账</a>
+      <a class="menu-item" href="distribute.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>拣货发放</a>
+      <div class="menu-group">受助管理</div>
+      <a class="menu-item" href="application-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="4.6" r="2.8"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5H2z"/></svg></span>受助需求池</a>
+      <a class="menu-item" href="application-review.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="4.6" r="2.8"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5H2z"/></svg></span>资格与反重审核</a>
+      <a class="menu-item" href="distribution-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>发放追踪单</a>
+      <a class="menu-item" href="feedback-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>去向反馈</a>
+      <div class="menu-group">创新模块</div>
+      <a class="menu-item" href="rule-config.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 5.4A2.6 2.6 0 1 0 8 10.6 2.6 2.6 0 0 0 8 5.4zM13 8c0-.4 0-.7-.1-1l1.4-1-1.3-2.2-1.6.6a4.9 4.9 0 0 0-1.7-1L9.4 1.6H7.2l-.3 1.8a4.9 4.9 0 0 0-1.7 1l-1.6-.6L2.3 6l1.4 1c-.1.3-.1.6-.1 1s0 .7.1 1l-1.4 1 1.3 2.2 1.6-.6c.5.4 1 .7 1.7 1l.3 1.8h2.2l.3-1.8c.6-.2 1.2-.5 1.7-1l1.6.6 1.3-2.2-1.4-1c.1-.3.1-.6.1-1z"/></svg></span>分配规则配置</a>
+      <a class="menu-item" href="score-detail.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="1.5" y="9" width="3" height="6"/><rect x="6.5" y="4" width="3" height="11"/><rect x="11.5" y="6.5" width="3" height="8.5"/></svg></span>分配建议解释</a>
+      <div class="menu-group">公开与报表</div>
+      <a class="menu-item" href="report.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="1.5" y="9" width="3" height="6"/><rect x="6.5" y="4" width="3" height="11"/><rect x="11.5" y="6.5" width="3" height="8.5"/></svg></span>公开报表</a>
+      <div class="menu-group">系统管理</div>
+      <a class="menu-item" href="user-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="4.6" r="2.8"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5H2z"/></svg></span>用户管理</a>
+      <a class="menu-item" href="role-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="4.6" r="2.8"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5H2z"/></svg></span>角色管理</a>
+      <a class="menu-item" href="menu-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 5.4A2.6 2.6 0 1 0 8 10.6 2.6 2.6 0 0 0 8 5.4zM13 8c0-.4 0-.7-.1-1l1.4-1-1.3-2.2-1.6.6a4.9 4.9 0 0 0-1.7-1L9.4 1.6H7.2l-.3 1.8a4.9 4.9 0 0 0-1.7 1l-1.6-.6L2.3 6l1.4 1c-.1.3-.1.6-.1 1s0 .7.1 1l-1.4 1 1.3 2.2 1.6-.6c.5.4 1 .7 1.7 1l.3 1.8h2.2l.3-1.8c.6-.2 1.2-.5 1.7-1l1.6.6 1.3-2.2-1.4-1c.1-.3.1-.6.1-1z"/></svg></span>菜单管理</a>
+      <a class="menu-item" href="log-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>操作日志</a>
+    </nav>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <div class="crumb"><b>总览</b><span>/</span>物资与需求</div>
+      <div class="topbar-right">
+        <div class="icon-btn"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5a4 4 0 0 1 4 4v3l1.4 2.2H2.6L4 8.5v-3a4 4 0 0 1 4-4zM6.4 12h3.2a1.6 1.6 0 0 1-3.2 0z"/></svg><span class="dot"></span></div>
+        <div class="icon-btn"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="6.6" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M6.2 6.2A1.9 1.9 0 0 1 9.8 6.6c0 1.2-1.6 1.5-1.6 2.7h-1.2c0-1.7 1.5-1.9 1.5-2.7a.8.8 0 0 0-1.5-.3l-1-.3zM7 11.4h1.3V12.6H7z"/></svg></div>
+        <div class="user"><div class="avatar">陈</div>
+          <div><div class="nm">陈砚秋</div><div class="rl">项目管理员</div></div></div>
+      </div>
+    </header>
+    <main class="content">
+<div class="page-head"><div><h1>物资与需求</h1><p>维护物资类别、规格单位、可接收质量与当前缺口，缺口驱动捐赠意向预审</p></div><div class="actions"><button class="btn">导出当前筛选</button><button class="btn btn-primary">+ 新增物资需求</button></div></div>
+<div class="card">
+  <div class="filter-bar">
+    <div class="filter-item"><label>物资类别</label><select class="select"><option>全部类别</option><option>米面粮油</option><option>御寒衣物</option><option>学习用品</option><option>日用清洁</option><option>医疗护理</option></select></div>
+    <div class="filter-item"><label>缺口状态</label><select class="select"><option>全部</option><option>缺口较大</option><option>接近达标</option><option>已满足</option></select></div>
+    <div class="filter-item"><label>可接收质量</label><select class="select"><option>全部</option><option>全新</option><option>九成新以上</option><option>八成新以上</option></select></div>
+    <div class="filter-item"><input class="input w-md" placeholder="品名 / 规格"></div>
+    <button class="btn btn-sub">查询</button><button class="btn">重置</button>
+  </div>
+  <div class="table-wrap"><table class="table"><thead><tr>
+    <th>需求编号</th><th>品名 / 规格</th><th>类别</th><th>单位</th><th>可接收质量</th>
+    <th>保质期要求</th><th>需求 / 已入库</th><th>当前缺口</th><th>紧迫度</th><th>操作</th></tr></thead>
+  <tbody>
+  <tr><td class="mono">DMD-0301</td>
+    <td><div class="cell-main"><div class="thumb" style="background:linear-gradient(135deg,#8A6E3C,#5B4520)"></div>
+      <div class="two-line"><b>一级压榨菜籽油</b><span>5L / 桶</span></div></div></td>
+    <td>米面粮油</td><td>桶</td><td>全新</td><td>≥ 12 个月</td>
+    <td class="num">1,200 / 742</td><td class="num" style="color:#B02A37;font-weight:600">458</td>
+    <td><span class="tag tag-warn">临期</span></td><td><span class="link-op">详情</span><span class="link-op">调缺口</span></td></tr>
+  <tr><td class="mono">DMD-0302</td>
+    <td><div class="cell-main"><div class="thumb" style="background:linear-gradient(135deg,#2C4A63,#19324A)"></div>
+      <div class="two-line"><b>加厚羽绒服（成人）</b><span>M / L / XL 三码</span></div></div></td>
+    <td>御寒衣物</td><td>件</td><td>九成新以上</td><td>不适用</td>
+    <td class="num">800 / 316</td><td class="num" style="color:#B02A37;font-weight:600">484</td>
+    <td><span class="tag tag-warn">临期</span></td><td><span class="link-op">详情</span><span class="link-op">调缺口</span></td></tr>
+  <tr><td class="mono">DMD-0303</td>
+    <td><div class="cell-main"><div class="thumb" style="background:linear-gradient(135deg,#356A7A,#2B7955)"></div>
+      <div class="two-line"><b>学生护眼台灯</b><span>USB 供电 / 三档调光</span></div></div></td>
+    <td>学习用品</td><td>台</td><td>全新</td><td>不适用</td>
+    <td class="num">400 / 388</td><td class="num" style="color:#A8761C;font-weight:600">12</td>
+    <td><span class="tag tag-success">正常</span></td><td><span class="link-op">详情</span><span class="link-op">调缺口</span></td></tr>
+  <tr><td class="mono">DMD-0304</td>
+    <td><div class="cell-main"><div class="thumb" style="background:linear-gradient(135deg,#4B5F6E,#33454F)"></div>
+      <div class="two-line"><b>成人纸尿裤</b><span>L 码 / 20 片装</span></div></div></td>
+    <td>医疗护理</td><td>包</td><td>全新</td><td>≥ 18 个月</td>
+    <td class="num">600 / 214</td><td class="num" style="color:#B02A37;font-weight:600">386</td>
+    <td><span class="tag tag-warn">临期</span></td><td><span class="link-op">详情</span><span class="link-op">调缺口</span></td></tr>
+  <tr><td class="mono">DMD-0305</td>
+    <td><div class="cell-main"><div class="thumb" style="background:linear-gradient(135deg,#6E7F8C,#4B5F6E)"></div>
+      <div class="two-line"><b>洗衣液（家庭装）</b><span>3kg / 瓶</span></div></div></td>
+    <td>日用清洁</td><td>瓶</td><td>全新</td><td>≥ 24 个月</td>
+    <td class="num">900 / 902</td><td class="num" style="color:#2B7955;font-weight:600">0</td>
+    <td><span class="tag tag-success">正常</span></td><td><span class="link-op">详情</span><span class="link-op">调缺口</span></td></tr>
+  <tr><td class="mono">DMD-0306</td>
+    <td><div class="cell-main"><div class="thumb" style="background:linear-gradient(135deg,#8A6E3C,#6E5528)"></div>
+      <div class="two-line"><b>东北长粒香米</b><span>10kg / 袋</span></div></div></td>
+    <td>米面粮油</td><td>袋</td><td>全新</td><td>≥ 10 个月</td>
+    <td class="num">1,500 / 1,126</td><td class="num" style="color:#A8761C;font-weight:600">374</td>
+    <td><span class="tag tag-success">正常</span></td><td><span class="link-op">详情</span><span class="link-op">调缺口</span></td></tr>
+  </tbody></table></div>
+  <div class="pager"><span class="total">共 26 条</span><select class="select" style="min-width:110px;height:27px"><option>10 条/页</option><option>20 条/页</option><option>50 条/页</option></select><span class="pg">上一页</span><span class="pg on">1</span><span class="pg">2</span><span class="pg">3</span><span class="pg">下一页</span></div>
+</div>
+    </main>
+  </div>
+</div></body></html>

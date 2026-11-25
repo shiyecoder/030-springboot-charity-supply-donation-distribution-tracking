@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>志愿服务 — 公益物资捐赠与发放追踪系统</title>
+<link rel="stylesheet" href="mock.css"></head>
+<body><div class="portal">
+  <header class="pnav">
+    <div class="brand"><div class="mark">慈</div>公益物资追踪平台</div>
+    <nav class="navs"><a class="on" href="volunteer.html">工作台</a><a class="" href="receiving.html">待收货</a><a class="" href="batch-list.html">在库批次</a><a class="" href="distribute.html">待拣货</a></nav>
+    <div class="right">
+      <div class="user"><div class="avatar">林</div><span>林素心</span></div>
+    </div>
+  </header>
+  <div class="pwrap">
+<div class="page-head" style="max-width:1220px;margin:0 auto 16px">
+  <div><h1>仓储志愿者工作台</h1><p>许文山 · 城西公益仓 · 今日待办 7 项，其中 2 项即将超时</p></div>
+  <div class="actions"><button class="btn">打印拣货单</button><button class="btn btn-primary">开始批量验收</button></div>
+</div>
+<div class="kpi-grid" style="grid-template-columns:repeat(4,1fr)">
+  <div class="kpi"><div class="lb">今日收货任务</div><div class="val">3<small>单</small></div><div class="tr">合计 386 件</div></div>
+  <div class="kpi"><div class="lb">待拣货任务</div><div class="val" style="color:#A8761C">4<small>单</small></div><div class="tr">2 单即将超时</div></div>
+  <div class="kpi"><div class="lb">负责货位</div><div class="val">12<small>个</small></div><div class="tr">A 区 6 / B 区 4 / C 区 2</div></div>
+  <div class="kpi"><div class="lb">本月完成</div><div class="val">86<small>单</small></div><div class="tr">平均验收时长 6.2 小时</div></div>
+</div>
+<div class="grid-2">
+  <div class="card"><div class="card-head"><h2>待收货验收</h2><span class="sub">按预约送达时间排序</span></div>
+    <div class="table-wrap"><table class="table"><thead><tr>
+      <th>收货单号</th><th>捐赠方</th><th>物资 / 数量</th><th>预约时间</th><th>状态</th><th>操作</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">RCV-1031-018</td><td>城西社区爱心志愿队</td><td>洗衣液 150 瓶</td><td class="num">10-29 15:00</td>
+        <td><span class="tag tag-warn">待验收</span></td><td><a class="link-op" href="receiving.html">验收</a></td></tr>
+      <tr><td class="mono">RCV-1101-021</td><td>杭州青禾商贸</td><td>菜籽油 200 桶</td><td class="num">11-03 09:00</td>
+        <td><span class="tag tag-info">待送达</span></td><td><span class="link-op">查看</span></td></tr>
+      <tr><td class="mono">RCV-1101-022</td><td>周慧兰（个人）</td><td>羽绒服 36 件</td><td class="num">11-02 14:30</td>
+        <td><span class="tag tag-info">待送达</span></td><td><span class="link-op">安排上门</span></td></tr>
+    </tbody></table></div>
+  </div>
+  <div class="card"><div class="card-head"><h2>待拣货发放</h2><span class="sub">系统已按先到期先出库推荐批次</span></div>
+    <div class="table-wrap"><table class="table"><thead><tr>
+      <th>发放单号</th><th>领取人</th><th>物资 / 数量</th><th>截止</th><th>状态</th><th>操作</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">DO-0418</td><td>王**（城西）</td><td>菜籽油 3 桶 / 大米 1 袋</td><td class="num">11-02 18:00</td>
+        <td><span class="tag tag-danger">即将超时</span></td><td><a class="link-op" href="distribute.html">拣货</a></td></tr>
+      <tr><td class="mono">DO-0415</td><td>南苑社区服务中心</td><td>洗衣液 60 瓶</td><td class="num">11-03 12:00</td>
+        <td><span class="tag tag-info">待拣货</span></td><td><a class="link-op" href="distribute.html">拣货</a></td></tr>
+      <tr><td class="mono">DO-0412</td><td>张**（北岭）</td><td>护眼台灯 2 台</td><td class="num">11-02 18:00</td>
+        <td><span class="tag tag-info">待领用</span></td><td><span class="link-op">登记领用</span></td></tr>
+    </tbody></table></div>
+  </div>
+</div>
+<div class="grid-2 mt16">
+  <div class="card"><div class="card-head"><h2>本仓临期批次</h2><span class="sub">≤30 天，建议优先出库</span></div>
+    <div class="table-wrap"><table class="table"><thead><tr>
+      <th>批次编号</th><th>物资</th><th>可用</th><th>货位</th><th>有效期至</th><th>操作</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">BAT-261029-05</td><td>洗衣液（家庭装）</td><td class="num">6 瓶</td><td>B-02-02</td>
+        <td class="num" style="color:#A8761C">2026-11-28</td><td><span class="link-op">优先出库</span></td></tr>
+      <tr><td class="mono">BAT-260402-11</td><td>一级压榨菜籽油</td><td class="num">48 桶</td><td>A-03-01</td>
+        <td class="num" style="color:#A8761C">2026-12-20</td><td><span class="link-op">优先出库</span></td></tr>
+    </tbody></table></div>
+  </div>
+  <div class="card"><div class="card-head"><h2>今日盘点任务</h2></div>
+    <div class="table-wrap"><table class="table"><thead><tr>
+      <th>货位</th><th>账面数量</th><th>实盘数量</th><th>差异</th><th>状态</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">A-03-01</td><td class="num">48</td><td class="num">48</td><td class="num">0</td><td><span class="tag tag-success">正常</span></td></tr>
+      <tr><td class="mono">A-03-02</td><td class="num">200</td><td class="num">198</td><td class="num" style="color:#B02A37">-2</td><td><span class="tag tag-warn">待复核</span></td></tr>
+      <tr><td class="mono">B-02-01</td><td class="num">96</td><td class="num">96</td><td class="num">0</td><td><span class="tag tag-success">正常</span></td></tr>
+    </tbody></table></div>
+  </div>
+</div>
+  </div>
+</div></body></html>

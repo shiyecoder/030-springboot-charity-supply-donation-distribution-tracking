@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>个人中心 — 公益物资捐赠与发放追踪系统</title>
+<link rel="stylesheet" href="mock.css"></head>
+<body><div class="app">
+  <aside class="sidebar">
+    <div class="logo"><div class="mark">慈</div>
+      <div class="name">公益物资追踪<small>CHARITY MATERIAL TRACKING</small></div></div>
+    <nav class="menu">
+      <div class="menu-group">总览</div>
+      <a class="menu-item" href="dashboard.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></span>公益物资看板</a>
+      <div class="menu-group">捐赠管理</div>
+      <a class="menu-item" href="project-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 14S1.5 9.9 1.5 5.9A3.4 3.4 0 0 1 8 4a3.4 3.4 0 0 1 6.5 1.9C14.5 9.9 8 14 8 14z"/></svg></span>捐赠项目</a>
+      <a class="menu-item" href="demand-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l6 3v8l-6 3-6-3V4l6-3zm0 1.6L3.9 4.6 8 6.5l4.1-1.9L8 2.6zM3 5.9v5.4l4 2v-5.4L3 5.9zm6 7.4l4-2V5.9l-4 2v5.4z"/></svg></span>物资与需求</a>
+      <a class="menu-item" href="intent-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>捐赠意向<span class="badge">6</span></a>
+      <div class="menu-group">仓储管理</div>
+      <a class="menu-item" href="receiving.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l6 3v8l-6 3-6-3V4l6-3zm0 1.6L3.9 4.6 8 6.5l4.1-1.9L8 2.6zM3 5.9v5.4l4 2v-5.4L3 5.9zm6 7.4l4-2V5.9l-4 2v5.4z"/></svg></span>收货验收</a>
+      <a class="menu-item" href="batch-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l6 3v8l-6 3-6-3V4l6-3zm0 1.6L3.9 4.6 8 6.5l4.1-1.9L8 2.6zM3 5.9v5.4l4 2v-5.4L3 5.9zm6 7.4l4-2V5.9l-4 2v5.4z"/></svg></span>物资批次台账</a>
+      <a class="menu-item" href="distribute.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>拣货发放</a>
+      <div class="menu-group">受助管理</div>
+      <a class="menu-item" href="application-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="4.6" r="2.8"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5H2z"/></svg></span>受助需求池</a>
+      <a class="menu-item" href="application-review.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="4.6" r="2.8"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5H2z"/></svg></span>资格与反重审核</a>
+      <a class="menu-item" href="distribution-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>发放追踪单</a>
+      <a class="menu-item" href="feedback-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>去向反馈</a>
+      <div class="menu-group">创新模块</div>
+      <a class="menu-item" href="rule-config.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 5.4A2.6 2.6 0 1 0 8 10.6 2.6 2.6 0 0 0 8 5.4zM13 8c0-.4 0-.7-.1-1l1.4-1-1.3-2.2-1.6.6a4.9 4.9 0 0 0-1.7-1L9.4 1.6H7.2l-.3 1.8a4.9 4.9 0 0 0-1.7 1l-1.6-.6L2.3 6l1.4 1c-.1.3-.1.6-.1 1s0 .7.1 1l-1.4 1 1.3 2.2 1.6-.6c.5.4 1 .7 1.7 1l.3 1.8h2.2l.3-1.8c.6-.2 1.2-.5 1.7-1l1.6.6 1.3-2.2-1.4-1c.1-.3.1-.6.1-1z"/></svg></span>分配规则配置</a>
+      <a class="menu-item" href="score-detail.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="1.5" y="9" width="3" height="6"/><rect x="6.5" y="4" width="3" height="11"/><rect x="11.5" y="6.5" width="3" height="8.5"/></svg></span>分配建议解释</a>
+      <div class="menu-group">公开与报表</div>
+      <a class="menu-item" href="report.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="1.5" y="9" width="3" height="6"/><rect x="6.5" y="4" width="3" height="11"/><rect x="11.5" y="6.5" width="3" height="8.5"/></svg></span>公开报表</a>
+      <div class="menu-group">系统管理</div>
+      <a class="menu-item" href="user-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="4.6" r="2.8"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5H2z"/></svg></span>用户管理</a>
+      <a class="menu-item" href="role-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="4.6" r="2.8"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5H2z"/></svg></span>角色管理</a>
+      <a class="menu-item" href="menu-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 5.4A2.6 2.6 0 1 0 8 10.6 2.6 2.6 0 0 0 8 5.4zM13 8c0-.4 0-.7-.1-1l1.4-1-1.3-2.2-1.6.6a4.9 4.9 0 0 0-1.7-1L9.4 1.6H7.2l-.3 1.8a4.9 4.9 0 0 0-1.7 1l-1.6-.6L2.3 6l1.4 1c-.1.3-.1.6-.1 1s0 .7.1 1l-1.4 1 1.3 2.2 1.6-.6c.5.4 1 .7 1.7 1l.3 1.8h2.2l.3-1.8c.6-.2 1.2-.5 1.7-1l1.6.6 1.3-2.2-1.4-1c.1-.3.1-.6.1-1z"/></svg></span>菜单管理</a>
+      <a class="menu-item" href="log-list.html"><span class="ic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 1h6l4 4v10H3V1zm6 1.5V5h2.5L9 2.5zM5 8h6v1H5V8zm0 2.5h6v1H5v-1z"/></svg></span>操作日志</a>
+    </nav>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <div class="crumb"><b>总览</b><span>/</span>个人中心</div>
+      <div class="topbar-right">
+        <div class="icon-btn"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5a4 4 0 0 1 4 4v3l1.4 2.2H2.6L4 8.5v-3a4 4 0 0 1 4-4zM6.4 12h3.2a1.6 1.6 0 0 1-3.2 0z"/></svg><span class="dot"></span></div>
+        <div class="icon-btn"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="6.6" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M6.2 6.2A1.9 1.9 0 0 1 9.8 6.6c0 1.2-1.6 1.5-1.6 2.7h-1.2c0-1.7 1.5-1.9 1.5-2.7a.8.8 0 0 0-1.5-.3l-1-.3zM7 11.4h1.3V12.6H7z"/></svg></div>
+        <div class="user"><div class="avatar">陈</div>
+          <div><div class="nm">陈砚秋</div><div class="rl">项目管理员</div></div></div>
+      </div>
+    </header>
+    <main class="content">
+<div class="page-head"><div><h1>个人中心</h1><p>修改资料、密码与头像，头像上传后右上角立即同步</p></div></div>
+<div class="grid-23">
+  <div class="card"><div class="card-head"><h2>头像</h2></div>
+    <div style="text-align:center;padding:10px 0">
+      <div class="avatar" style="width:88px;height:88px;font-size:30px;margin:0 auto">陈</div>
+      <div class="mt12"><button class="btn btn-sm">上传新头像</button></div>
+      <div class="hint-line mt8">JPG / PNG，≤2MB，建议 400×400</div>
+    </div>
+    <div class="card-head mt16" style="margin-bottom:10px"><h2>账号信息</h2></div>
+    <dl class="dl" style="grid-template-columns:76px 1fr">
+      <dt>登录账号</dt><dd class="mono">admin</dd>
+      <dt>角色</dt><dd>项目管理员</dd>
+      <dt>所属组织</dt><dd>总会秘书处</dd>
+      <dt>数据范围</dt><dd>全部组织</dd>
+      <dt>最近登录</dt><dd class="num">2026-11-01 09:41:12</dd>
+      <dt>登录 IP</dt><dd class="num">192.168.1.12</dd>
+    </dl>
+  </div>
+  <div>
+    <div class="card"><div class="card-head"><h2>基本资料</h2><div class="actions"><button class="btn btn-primary btn-sm">保存修改</button></div></div>
+      <div class="form-grid">
+        <div class="form-item"><label>姓名<em>*</em></label><input class="input" value="陈砚秋"></div>
+        <div class="form-item"><label>手机号<em>*</em></label><input class="input" value="13800130021"></div>
+        <div class="form-item"><label>电子邮箱</label><input class="input" value="chenyq@charity.org.cn"></div>
+        <div class="form-item"><label>所属组织</label><select class="select"><option>总会秘书处</option><option>城西公益仓</option></select></div>
+        <div class="form-item full"><label>负责业务</label><input class="input" value="捐赠项目发布、物资分配审批、公开报表审核"></div>
+      </div>
+    </div>
+    <div class="card"><div class="card-head"><h2>修改密码</h2><span class="sub">密码使用 BCrypt 保存，任何接口不返回密码字段</span></div>
+      <div class="form-grid">
+        <div class="form-item"><label>当前密码<em>*</em></label><input class="input" type="password" value="········"></div>
+        <div class="form-item"><label>新密码<em>*</em></label><input class="input" type="password" value="········"></div>
+        <div class="form-item"><label>确认新密码<em>*</em></label><input class="input" type="password" value="········"></div>
+        <div class="form-item"><label>&nbsp;</label><button class="btn btn-primary">更新密码</button></div>
+      </div>
+      <div class="hint-line">密码需 8 位以上，包含字母与数字；连续 5 次登录失败将锁定 10 分钟。</div>
+    </div>
+    <div class="card"><div class="card-head"><h2>消息订阅</h2></div>
+      <div class="grid-2">
+        <div class="flex gap8"><input type="checkbox" checked><span>待审批消息</span></div>
+        <div class="flex gap8"><input type="checkbox" checked><span>即将超时提醒</span></div>
+        <div class="flex gap8"><input type="checkbox" checked><span>批次临期提醒</span></div>
+        <div class="flex gap8"><input type="checkbox"><span>每周统计简报</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+    </main>
+  </div>
+</div></body></html>
